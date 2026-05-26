@@ -6,9 +6,11 @@ JavaScript / TypeScript reader and writer for [CSVJ](https://csvj.org)
 files. Runs in both browsers and Node.js; ships as dual ESM/CJS with
 TypeScript declarations.
 
-> **Status (2026-05-26): bootstrap.** Package scaffolding only — the
-> reader and writer are not implemented yet. Tracked as §3.2 in the
-> project plan.
+> **Status (2026-05-26):** the reader and writer are implemented and
+> pass every conformance vector currently published by
+> [csvj-org/conformance](https://github.com/csvj-org/conformance). No
+> tagged release yet — pin against the `master` branch if you want to
+> experiment.
 
 ## Overview
 
