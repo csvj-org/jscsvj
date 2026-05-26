@@ -21,3 +21,13 @@ a first tagged release is cut.
 - `parse` and `stringify` placeholder exports that throw "not yet
   implemented" so downstream consumers can pin against the public surface
   before the reader/writer land in §3.2.
+
+### Changed
+- `parse` and `stringify` now have working implementations. `parse`
+  accepts both `\n` and `\r\n` line endings, returns `{ header, rows }`,
+  and rejects non-string headers, array/object values, and any JSON
+  token CSVJ does not permit at value position. `stringify` writes with
+  `\n` terminators, JSON-encodes values without extra whitespace, and
+  rejects non-finite numbers and rows whose length does not match the
+  header. All four currently-published conformance accept vectors and
+  all four `must-reject` vectors pass.
